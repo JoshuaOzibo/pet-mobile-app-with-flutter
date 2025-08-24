@@ -79,8 +79,9 @@ class DetailsFirstPage extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Pet Photo', 
-                style: TextStyle(fontWeight: FontWeight.w500),
+                Text(
+                  'Pet Photo',
+                  style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 SizedBox(height: 10),
                 Row(
@@ -110,8 +111,9 @@ class DetailsFirstPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   spacing: 10,
                   children: [
-                    Text('Pet Name', 
-                    style: TextStyle(fontWeight: FontWeight.w500),
+                    Text(
+                      'Pet Name',
+                      style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     TextField(
                       decoration: InputDecoration(
@@ -129,6 +131,43 @@ class DetailsFirstPage extends StatelessWidget {
                     ),
                   ],
                 ),
+
+                SizedBox(height: 20),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: 10,
+                  children: [
+                    Text(
+                      'Age',
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        hoverColor: Colors.amber,
+                        hint: Text(
+                          'Select age range',
+                          style: TextStyle(
+                            color: const Color.fromARGB(255, 61, 61, 61),
+                          ),
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+
+                SizedBox(height: 20,),
+
+                // continue button
+                ElevatedButton(
+                  style: ButtonStyle(
+                    
+                  ),
+                  onPressed: (){}, 
+                  child: Text('Continue'))
               ],
             ),
           ],
