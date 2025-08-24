@@ -14,7 +14,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const  SecondPage(),  // DetailsFirstPage(),
-    );
+      home: DetailsFirstPage(),
+      routes: {
+        '/first_onbording_page': (context) => SecondPage(),
+        '/second_onbording_page': (context) => SecondPage(),
+      },
+      );  //SecondPage(),  // DetailsFirstPage(),
   }
 }
+
+
+/**
+ * 
+ * Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: ElevatedButton(
+                onPressed: (){Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => SecondPage(),
+                  ));}, 
+                child: Text('Go to home')),
+            )
+          ],
+        )
+ */

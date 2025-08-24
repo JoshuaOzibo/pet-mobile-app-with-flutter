@@ -8,7 +8,11 @@ class SecondPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: const Icon(Icons.backspace_outlined),
+        leading: TextButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+          child: const Icon(Icons.backspace_outlined)),
         actions: [
           Container(
             padding: const EdgeInsets.only(right: 20),
