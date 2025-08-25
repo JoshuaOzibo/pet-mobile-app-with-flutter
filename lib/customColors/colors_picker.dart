@@ -3,9 +3,9 @@ import 'package:hexcolor/hexcolor.dart';
 
 class AppColors {
   static Color grayBackground = HexColor('#f4f6f8');
-  static Color grayBorder = HexColor('#f4f6f8');
+  static Color grayBorder = HexColor('#4b5563');
   static Color background = HexColor('#f4f6f8');
-  static Color orangeBorder = HexColor('#dfa890');
-  static Color orangeText = HexColor('#ff824a');
-  static Color orangeTranparentBackground = HexColor('#fbeee9');
+  static Color orangeBorder = HexColor('#f97316');
+  static Color orangeText = HexColor('#ea580c');
+  static Color orangeTranparentBackground = HexColor('#fff7ed');
 }

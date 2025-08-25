@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_app/features/select_pet_features/components/toggle_size_button.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
@@ -43,12 +44,14 @@ class SecondPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: 10,
               children: [
-                Text('Pet Name', style: TextStyle(fontWeight: FontWeight.w500)),
+                Text('Pet Name', 
+                style: TextStyle(
+                  fontWeight: FontWeight.w500)),
                 TextField(
                   decoration: InputDecoration(
                     hoverColor: Colors.amber,
                     hint: Text(
-                      'E.g Bella, Max etc',
+                      'e.g. Golden Retriever, Persian Cat',
                       style: TextStyle(
                         color: const Color.fromARGB(255, 61, 61, 61),
                       ),
@@ -58,6 +61,10 @@ class SecondPage extends StatelessWidget {
                     ),
                   ),
                 ),
+
+
+                SizedBox(height: 20,),
+                ToggleSizeButton(),
               ],
             ),
           ],

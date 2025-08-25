@@ -64,7 +64,7 @@ class _CustomToggleButtonState extends State<CustomToggleButton> {
           children: [
             customButton(icon: '🐠', text: 'Fish', index: 3),
             customButton(icon: '🐍', text: 'Reptile', index: 4),
-            customButton(icon: '🦦', text: 'Others', index: 5),
+            customButton(icon: '🐾', text: 'Others', index: 5),
           ],
         ),
       ],

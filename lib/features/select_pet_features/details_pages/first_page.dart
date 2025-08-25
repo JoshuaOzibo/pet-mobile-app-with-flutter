@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/customColors/colors_picker.dart';
+import 'package:pet_app/features/select_pet_features/components/input_selection.dart';
 import 'package:pet_app/features/select_pet_features/components/toggle_button.dart';
 
 class DetailsFirstPage extends StatefulWidget {
@@ -200,12 +201,16 @@ class _DetailsFirstPageState extends State<DetailsFirstPage> {
 
                   SizedBox(height: 20),
 
+                  InputSelection(),
+
+                  SizedBox(height: 20,),
+
                   // continue button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
+                        backgroundColor: AppColors.orangeText,
                         foregroundColor: Colors.white,
                         elevation: 0,
                         padding: EdgeInsets.symmetric(vertical: 16), // height
