@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
 
-class CustomToggleButton extends StatefulWidget {
-  const CustomToggleButton({super.key});
+class GenderSelectButton extends StatefulWidget {
+  const GenderSelectButton({super.key});
 
   @override
-  State<CustomToggleButton> createState() => _CustomToggleButtonState();
+  State<GenderSelectButton> createState() => _GenderSelectButtonState();
 }
 
-class _CustomToggleButtonState extends State<CustomToggleButton> {
+class _GenderSelectButtonState extends State<GenderSelectButton> {
   int selectedItemIndex = 0;
 
   final List<Map<String, String>> options = [
-    {"icon": "🐶", "text": "Dog"},
-    {"icon": "🐱", "text": "Cat"},
-    {"icon": "🐥", "text": "Birds"},
-    {"icon": "🐠", "text": "Fish"},
-    {"icon": "🐍", "text": "Reptile"},
-    {"icon": "🐾", "text": "Others"},
+    {"text": "Male"},
+    {"text": "Female"},
+    {"text": "Spayed"},
+    {"text": "Neutered"},
   ];
 
   Widget customButton({
-    required String icon,
     required String text,
     required int index,
   }) {
@@ -46,14 +43,7 @@ class _CustomToggleButtonState extends State<CustomToggleButton> {
                 : const Color.fromARGB(255, 205, 205, 205),
           ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(icon, style: const TextStyle(fontSize: 20)),
-            const SizedBox(width: 6),
-            Text(text),
-          ],
-        ),
+        child: Text(text),
       ),
     );
   }
@@ -63,14 +53,13 @@ class _CustomToggleButtonState extends State<CustomToggleButton> {
     return GridView.count(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      crossAxisCount: 3,
+      crossAxisCount: 2,
       mainAxisSpacing: 10,
       crossAxisSpacing: 10,
-      childAspectRatio: 1.5,
+      childAspectRatio: 3,
       children: List.generate(options.length, (index) {
         final item = options[index];
         return customButton(
-          icon: item["icon"]!,
           text: item["text"]!,
           index: index,
         );
