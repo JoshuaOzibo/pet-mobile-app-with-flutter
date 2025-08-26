@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       home: DetailsFirstPage(),
       routes: {
         '/first_onbording_page': (context) => SecondPage(),
+        '/home_page': (context) => HomeScreen(),
         '/second_onbording_page': (context) => SecondPage(),
       },
       );  //SecondPage(),  // DetailsFirstPage(),

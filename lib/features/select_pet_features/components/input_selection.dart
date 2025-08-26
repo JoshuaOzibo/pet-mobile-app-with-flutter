@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class InputSelection extends StatefulWidget {
+  const InputSelection({super.key});
+
   @override
   _InputSelectionState createState() => _InputSelectionState();
 }

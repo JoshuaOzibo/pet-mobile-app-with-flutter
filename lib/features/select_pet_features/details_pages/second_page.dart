@@ -86,7 +86,7 @@ class SecondPage extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/second_onbording_page');
+                        Navigator.pushNamed(context, '/home_page');
                       },
                       child: Text(
                         'Continue',

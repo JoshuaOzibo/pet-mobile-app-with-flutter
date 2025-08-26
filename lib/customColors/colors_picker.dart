@@ -8,4 +8,6 @@ class AppColors {
   static Color orangeBorder = HexColor('#f97316');
   static Color orangeText = HexColor('#ea580c');
   static Color orangeTranparentBackground = HexColor('#fff7ed');
+  static Color darkOrange = HexColor('#FD834C ');
+  static Color heroOrange = HexColor('#F16222');
 }
