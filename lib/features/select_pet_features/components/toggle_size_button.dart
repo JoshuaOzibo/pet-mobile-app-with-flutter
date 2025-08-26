@@ -71,11 +71,21 @@ class _ToggleSizeButtonState extends State<ToggleSizeButton> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: 10,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        selectSizeWidget(index: 0, size: 'Small', weight: 'Under 25 ibs'),
-        selectSizeWidget(index: 1, size: 'Medium', weight: '25-60 ibs'),
-        selectSizeWidget(index: 2, size: 'Large', weight: '60+ ibs'),
+        Text(
+          'Size',
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+        ),
+        SizedBox(height: 10),
+        Column(
+          spacing: 12,
+          children: [
+            selectSizeWidget(index: 0, size: 'Small', weight: 'Under 25 ibs'),
+            selectSizeWidget(index: 1, size: 'Medium', weight: '25-60 ibs'),
+            selectSizeWidget(index: 2, size: 'Large', weight: '60+ ibs'),
+          ],
+        ),
       ],
     );
   }

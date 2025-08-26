@@ -172,6 +172,7 @@ class _DetailsFirstPageState extends State<DetailsFirstPage> {
                   CustomToggleButton(),
 
                   SizedBox(height: 20),
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     spacing: 10,
@@ -183,27 +184,11 @@ class _DetailsFirstPageState extends State<DetailsFirstPage> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hint: Text(
-                            'Select age range',
-                            style: TextStyle(
-                              color: const Color.fromARGB(255, 61, 61, 61),
-                            ),
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
+                      InputSelection(),
                     ],
                   ),
 
                   SizedBox(height: 20),
-
-                  InputSelection(),
-
-                  SizedBox(height: 20,),
 
                   // continue button
                   SizedBox(

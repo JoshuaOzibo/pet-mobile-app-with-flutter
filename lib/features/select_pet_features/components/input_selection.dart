@@ -6,32 +6,40 @@ class InputSelection extends StatefulWidget {
 }
 
 class _InputSelectionState extends State<InputSelection> {
-  String? selectedValue = "Select age range"; // default value
+  String? selectedValue; // no default, we'll use hint
 
-  final List<String> options = ["0-6 months", "6 months - 1 year", "1-3 years", "3-7 years", "7+ years"];
+  final List<String> options = [
+    "0-6 months",
+    "6 months - 1 year",
+    "1-3 years",
+    "3-7 years",
+    "7+ years",
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: 55,
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
-        border: BoxBorder.all(
-          color: Colors.black
-        )
+        border: Border.all(color: Colors.black),
+        borderRadius: BorderRadius.circular(6),
       ),
-      padding: EdgeInsets.all(8),
       child: DropdownButton<String>(
-        elevation: 0,
         value: selectedValue,
+        isExpanded: true, // makes dropdown fill the width
+        underline: SizedBox(), // remove default underline
+        hint: Text("Select age range"), 
         items: options.map((String value) {
           return DropdownMenuItem<String>(
-            value: value, 
-          child: Text(value));
+            value: value,
+            child: Text(value),
+          );
         }).toList(),
         onChanged: (String? newValue) {
           setState(() {
-            selectedValue = newValue!;
+            selectedValue = newValue;
           });
         },
       ),

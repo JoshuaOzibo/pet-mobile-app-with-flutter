@@ -10,10 +10,11 @@ class SecondPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         leading: TextButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
-          child: const Icon(Icons.backspace_outlined)),
+          child: const Icon(Icons.backspace_outlined),
+        ),
         actions: [
           Container(
             padding: const EdgeInsets.only(right: 20),
@@ -44,12 +45,9 @@ class SecondPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: 10,
               children: [
-                Text('Pet Name', 
-                style: TextStyle(
-                  fontWeight: FontWeight.w500)),
+                Text('Breed', style: TextStyle(fontWeight: FontWeight.w500)),
                 TextField(
                   decoration: InputDecoration(
-                    hoverColor: Colors.amber,
                     hint: Text(
                       'e.g. Golden Retriever, Persian Cat',
                       style: TextStyle(
@@ -62,8 +60,7 @@ class SecondPage extends StatelessWidget {
                   ),
                 ),
 
-
-                SizedBox(height: 20,),
+                SizedBox(height: 20),
                 ToggleSizeButton(),
               ],
             ),
