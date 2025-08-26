@@ -45,7 +45,8 @@ class _ToggleSizeButtonState extends State<ToggleSizeButton> {
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text(size), Text(weight)]),
+              children: [Text(size), Text(weight)],
+            ),
 
             Container(
               width: 20,
@@ -53,11 +54,12 @@ class _ToggleSizeButtonState extends State<ToggleSizeButton> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
                 border: Border.all(
-                  color: isSelected ? AppColors.orangeBorder : AppColors.grayBorder,
+                  color: isSelected
+                      ? AppColors.orangeBorder
+                      : AppColors.grayBorder,
                   width: isSelected ? 5 : 2,
                   // color: Colors.deepOrange
                 ),
-                  
               ),
             ),
           ],
@@ -71,9 +73,9 @@ class _ToggleSizeButtonState extends State<ToggleSizeButton> {
     return Column(
       spacing: 10,
       children: [
-        selectSizeWidget( index: 0, size: 'Small', weight: 'Under 25 ibs'),
-        selectSizeWidget( index: 1, size: 'Medium', weight: '25-60 ibs'),
-        selectSizeWidget( index: 2, size: 'Large', weight: '60+ ibs'),
+        selectSizeWidget(index: 0, size: 'Small', weight: 'Under 25 ibs'),
+        selectSizeWidget(index: 1, size: 'Medium', weight: '25-60 ibs'),
+        selectSizeWidget(index: 2, size: 'Large', weight: '60+ ibs'),
       ],
     );
   }
