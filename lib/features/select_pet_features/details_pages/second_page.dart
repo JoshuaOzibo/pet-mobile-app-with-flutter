@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pet_app/customColors/colors_picker.dart';
 import 'package:pet_app/features/select_pet_features/components/gender_select_button.dart';
+import 'package:pet_app/features/select_pet_features/components/spayed_select.dart';
 import 'package:pet_app/features/select_pet_features/components/toggle_size_button.dart';
 
 class SecondPage extends StatelessWidget {
@@ -8,7 +10,9 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         elevation: 0,
         leading: TextButton(
           onPressed: () {
@@ -41,7 +45,7 @@ class SecondPage extends StatelessWidget {
                 'Help us understand your pet specific need',
                 style: TextStyle(),
               ),
-        
+
               SizedBox(height: 20),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,11 +65,41 @@ class SecondPage extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   SizedBox(height: 20),
                   ToggleSizeButton(),
+                  SizedBox(height: 10),
+                  GenderSelectButton(),
+                  SpayedSelect(),
+                  SizedBox(height: 10),
+
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.orangeText,
+                        foregroundColor: Colors.white,
+                        elevation: 0,
+                        padding: EdgeInsets.symmetric(vertical: 16), // height
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/second_onbording_page');
+                      },
+                      child: Text(
+                        'Continue',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+
+
                   SizedBox(height: 20),
-                  GenderSelectButton()
                 ],
               ),
             ],

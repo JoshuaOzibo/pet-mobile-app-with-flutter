@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 
-class GenderSelectButton extends StatefulWidget {
-  const GenderSelectButton({super.key});
+class SpayedSelect extends StatefulWidget {
+  const SpayedSelect({super.key});
 
   @override
-  State<GenderSelectButton> createState() => _GenderSelectButtonState();
+  State<SpayedSelect> createState() => _SpayedSelectState();
 }
 
-class _GenderSelectButtonState extends State<GenderSelectButton> {
+class _SpayedSelectState extends State<SpayedSelect> {
   int selectedItemIndex = 0;
 
   final List<Map<String, String>> options = [
-    {"text": "Male"},
-    {"text": "Female"},
+    {"text": "Spayed"},
+    {"text": "Neutered"},
   ];
 
-  Widget customButton({
-    required String text,
-    required int index,
-  }) {
+  Widget customButton({required String text, required int index}) {
     bool isSelected = selectedItemIndex == index;
 
     return GestureDetector(
@@ -52,8 +49,7 @@ class _GenderSelectButtonState extends State<GenderSelectButton> {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: 10,
       children: [
-        Text('Gender', style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal)),
-        // SizedBox(height: 10),
+        Text( 'Spayed/Neutered', style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal)),
         GridView.count(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -63,10 +59,7 @@ class _GenderSelectButtonState extends State<GenderSelectButton> {
           childAspectRatio: 3,
           children: List.generate(options.length, (index) {
             final item = options[index];
-            return customButton(
-              text: item["text"]!,
-              index: index,
-            );
+            return customButton(text: item["text"]!, index: index);
           }),
         ),
       ],
