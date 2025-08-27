@@ -30,7 +30,31 @@ class _DetailsFirstPageState extends State<DetailsFirstPage> {
         actions: [
           Container(
             padding: const EdgeInsets.only(right: 20),
-            child: const Icon(Icons.local_activity_outlined),
+            child: SizedBox(
+                        height: 50,
+                        width: 50,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            CircularProgressIndicator(
+                              padding: EdgeInsets.all(0),
+                              value: 0.35,
+                              strokeWidth: 4,
+                              backgroundColor: Colors.grey[300],
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                Colors.orange,
+                              ),
+                            ),
+                            Text(
+                              "1",
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
           ),
         ],
       ),
