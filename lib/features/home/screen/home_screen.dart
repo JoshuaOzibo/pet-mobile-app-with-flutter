@@ -46,6 +46,7 @@ class HomeScreen extends StatelessWidget {
 
       body: SingleChildScrollView(
         child: Container(
+          color: Colors.white,
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,7 +68,9 @@ class HomeScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(100),
                             color: Colors.grey,
                             image: DecorationImage(
-                              image: AssetImage('assets/images/profile_image.jpg'),
+                              image: AssetImage(
+                                'assets/images/profile_image.jpg',
+                              ),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -312,22 +315,31 @@ class HomeScreen extends StatelessWidget {
                     border: Border.all(width: 0.5, color: Colors.grey),
                   ),
                   child: Row(
-                    spacing: 10,
+                    spacing: 5,
                     children: [
-                      Container(
-                        // padding: EdgeInsets.all(16),
+                      SizedBox(
                         height: 50,
                         width: 50,
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 2, color: Colors.grey),
-                          borderRadius: BorderRadius.circular(100),
-                        ),
-
-                        child: Center(
-                          child: Text('85%', style: TextStyle(
-                            fontSize: 15, 
-                            fontWeight: FontWeight.bold
-                          ),),
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            CircularProgressIndicator(
+                              padding: EdgeInsets.all(0),
+                              value: 0.7,
+                              strokeWidth: 4,
+                              backgroundColor: Colors.grey[300],
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                Colors.orange,
+                              ),
+                            ),
+                            Text(
+                              "85%",
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       Column(
@@ -379,7 +391,7 @@ class HomeScreen extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.deepOrangeAccent,
                             fontSize: 17,
-                            fontWeight: FontWeight.bold
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
@@ -414,12 +426,15 @@ class HomeScreen extends StatelessWidget {
                                           100,
                                         ),
                                       ),
-                                      child: Text('💊', style: TextStyle(
-                                        fontSize: 18, 
-                                        fontWeight: FontWeight.bold),
+                                      child: Text(
+                                        '💊',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
-                                    
+
                                     Container(
                                       padding: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
@@ -428,9 +443,12 @@ class HomeScreen extends StatelessWidget {
                                           100,
                                         ),
                                       ),
-                                      child: Text('✔️', style: TextStyle(
-                                        fontSize: 16, 
-                                        fontWeight: FontWeight.bold),
+                                      child: Text(
+                                        '✔️',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -490,9 +508,12 @@ class HomeScreen extends StatelessWidget {
                                           100,
                                         ),
                                       ),
-                                       child: Text('🥩', style: TextStyle(
-                                        fontSize: 18, 
-                                        fontWeight: FontWeight.bold),
+                                      child: Text(
+                                        '🥩',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
                                     Container(
@@ -503,9 +524,12 @@ class HomeScreen extends StatelessWidget {
                                           100,
                                         ),
                                       ),
-                                       child: Text('🦴', style: TextStyle(
-                                        fontSize: 18, 
-                                        fontWeight: FontWeight.bold),
+                                      child: Text(
+                                        '🦴',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -565,7 +589,7 @@ class HomeScreen extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.deepOrangeAccent,
                             fontSize: 17,
-                            fontWeight: FontWeight.bold
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
