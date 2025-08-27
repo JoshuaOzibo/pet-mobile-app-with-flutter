@@ -717,7 +717,7 @@ class HomeScreen extends StatelessWidget {
       // bottom navigation bar
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-          labelTextStyle: MaterialStateProperty.all(
+          labelTextStyle: WidgetStateProperty.all(
             const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.bold,
