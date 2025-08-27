@@ -45,7 +45,7 @@ class _ToggleSizeButtonState extends State<ToggleSizeButton> {
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text(size), Text(weight)],
+              children: [Text(size, style: TextStyle(color: isSelected ? Colors.deepOrangeAccent : Colors.black, fontWeight: FontWeight.bold, fontSize: 15),), Text(weight, style: TextStyle(color: Colors.black, fontSize: 13),)],
             ),
 
             Container(

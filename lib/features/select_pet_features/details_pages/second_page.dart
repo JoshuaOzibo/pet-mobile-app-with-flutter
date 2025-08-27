@@ -18,36 +18,31 @@ class SecondPage extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          child: const Icon(Icons.backspace_outlined),
+          child: const Icon(Icons.arrow_back_ios, size: 23, color: Colors.black,),
         ),
         actions: [
           Container(
             padding: const EdgeInsets.only(right: 20),
             child: SizedBox(
-                        height: 50,
-                        width: 50,
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            CircularProgressIndicator(
-                              padding: EdgeInsets.all(0),
-                              value: 0.7,
-                              strokeWidth: 4,
-                              backgroundColor: Colors.grey[300],
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                Colors.orange,
-                              ),
-                            ),
-                            Text(
-                              "2",
-                              style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+              height: 50,
+              width: 50,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  CircularProgressIndicator(
+                    padding: EdgeInsets.all(0),
+                    value: 0.7,
+                    strokeWidth: 4,
+                    backgroundColor: Colors.grey[300],
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.orange),
+                  ),
+                  Text(
+                    "2",
+                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
@@ -121,7 +116,6 @@ class SecondPage extends StatelessWidget {
                       ),
                     ),
                   ),
-
 
                   SizedBox(height: 20),
                 ],
