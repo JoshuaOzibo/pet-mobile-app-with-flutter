@@ -18,7 +18,11 @@ class SecondPage extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          child: const Icon(Icons.arrow_back_ios, size: 23, color: Colors.black,),
+          child: const Icon(
+            Icons.arrow_back_ios,
+            size: 23,
+            color: Colors.black,
+          ),
         ),
         actions: [
           Container(
@@ -91,36 +95,34 @@ class SecondPage extends StatelessWidget {
                   GenderSelectButton(),
                   SpayedSelect(),
                   SizedBox(height: 10),
-
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.orangeText,
-                        foregroundColor: Colors.white,
-                        elevation: 0,
-                        padding: EdgeInsets.symmetric(vertical: 16), // height
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home_page');
-                      },
-                      child: Text(
-                        'Continue',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(height: 20),
                 ],
               ),
             ],
+          ),
+        ),
+      ),
+
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(10),
+        child: SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.orangeText,
+              foregroundColor: Colors.white,
+              elevation: 0,
+              padding: EdgeInsets.symmetric(vertical: 16), // height
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/home_page');
+            },
+            child: Text(
+              'Continue',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
           ),
         ),
       ),

@@ -25,7 +25,10 @@ class _DetailsFirstPageState extends State<DetailsFirstPage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: const Icon(Icons.arrow_back_ios),
+        leading: IconButton(
+          onPressed: () => {Navigator.pop(context)},
+          icon: const Icon(Icons.arrow_back_ios),
+        ),
 
         actions: [
           Container(
@@ -129,7 +132,7 @@ class _DetailsFirstPageState extends State<DetailsFirstPage> {
                     spacing: 13,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(16),
+                        padding: EdgeInsets.all(13),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           border: Border.all(
@@ -208,37 +211,35 @@ class _DetailsFirstPageState extends State<DetailsFirstPage> {
                   ),
 
                   SizedBox(height: 20),
-
-                  // continue button
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.orangeText,
-                        foregroundColor: Colors.white,
-                        elevation: 0,
-                        padding: EdgeInsets.symmetric(vertical: 16), // height
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/second_onbording_page');
-                      },
-                      child: Text(
-                        'Continue',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(height: 10),
                 ],
               ),
             ],
+          ),
+        ),
+      ),
+
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        // continue button
+        child: SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.orangeText,
+              foregroundColor: Colors.white,
+              elevation: 0,
+              padding: EdgeInsets.symmetric(vertical: 16), // height
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/second_onbording_page');
+            },
+            child: Text(
+              'Continue',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
           ),
         ),
       ),
