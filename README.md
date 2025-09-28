@@ -1,16 +1,7 @@
 # pet_app
 
-A new Flutter project.
+# Practicing plutterb ui so i replicate this figma ui.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Here’s a screenshot of the ui:
+![App Screenshot](assets/images/home_screen_image.png)
+![App Screenshot](assets/images/onBording_image.png)

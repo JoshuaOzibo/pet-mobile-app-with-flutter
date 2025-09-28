@@ -41,7 +41,7 @@ class LandingScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
                 side: BorderSide(
-                  color: const Color.fromARGB(255, 184, 22, 22), // border color
+                  color: Colors.white, // border color
                   width: 2, // border width
                 ),
               ),
