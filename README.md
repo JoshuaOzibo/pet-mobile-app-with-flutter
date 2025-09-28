@@ -4,5 +4,7 @@
 
 Here’s a screenshot of the ui:
 
-<img src="assets/images/home_screen_image.png" alt="Home Screen" width="250"/> 
-<img src="assets/images/onBording_image.png" alt="Onboarding" width="250"/>
+<p align="center">
+  <img src="assets/images/home_screen_image.png" width="200"/><img src="assets/images/onBording_image.png" width="200"/>
+</p>
+
